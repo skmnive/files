@@ -1,0 +1,25 @@
+nive
+
+cisco@cisco-ThinkPad-T430:~$ sudo mkdir /mnt/sd1
+cisco@cisco-ThinkPad-T430:~$ sudo mount /dev/sdb1 /mnt/sd1/
+cisco@cisco-ThinkPad-T430:~$ ls -ld /mnt/sd1/
+drwxr-xr-x 9 cisco cisco 8192 Jan  1  1970 /mnt/sd1/
+cisco@cisco-ThinkPad-T430:~$ sudo mount -o rw,users,umask=000 /dev/sdb1 /mnt/sd1mount: /dev/sdb1 is already mounted or /mnt/sd1 busy
+       /dev/sdb1 is already mounted on /media/cisco/MULTIBOOT
+       /dev/sdb1 is already mounted on /mnt/sd1
+cisco@cisco-ThinkPad-T430:~$ ls -ld
+drwxr-xr-x 27 cisco cisco 4096 Nov 12 14:05 .
+cisco@cisco-ThinkPad-T430:~$ 
+cisco@cisco-ThinkPad-T430:~$ 
+cisco@cisco-ThinkPad-T430:~$ ls -ld /mnt/sd1/
+drwxr-xr-x 9 cisco cisco 8192 Jan  1  1970 /mnt/sd1/
+cisco@cisco-ThinkPad-T430:~$ chmod 777 /mnt/sd1/
+cisco@cisco-ThinkPad-T430:~$ ls -ld /mnt/sd1/
+drwxr-xr-x 9 cisco cisco 8192 Jan  1  1970 /mnt/sd1/
+cisco@cisco-ThinkPad-T430:~$ 
+cisco@cisco-ThinkPad-T430:~$ 
+cisco@cisco-ThinkPad-T430:~$ cp /home/cisco/a.txt /mnt/sd1/
+cisco@cisco-ThinkPad-T430:~$ ls -ld /mnt/sd1/
+drwxr-xr-x 9 cisco cisco 8192 Nov 12 14:15 /mnt/sd1/
+cisco@cisco-ThinkPad-T430:~$ 
+

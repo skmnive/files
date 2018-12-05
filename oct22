@@ -1,0 +1,45 @@
+RE
+--
+var = re.compile('ust')                       # -> returns bytecode of the given pattern
+var. search/match/findall/split/sub/finditer  # -> operates on this pattern
+
+^ - Starting with <pattern>
+$ - Ending with <pattern>
+[] - specifying a character class/range
+
+eg:
+[ai]$ --> ending with a or i
+[^ai]$ --> not ending with a or i
+
+* --> 0 or more occurence of its previous character
+
+eager match --> start and stop when first match found
+greedy match --> start when first match found, and end only on last match
+Greedy will consume as much as possible
+
+if you need match anything from R to L, use (.*) in pattern
+
+eg : 
+pat1 = re.compile('(.*)([0-9]+)')    
+====================================>>> returns 2 in current target
+target = 'ab9295cde92end98i'
+mat = pat1.search(target)
+
+i.e., 
+grp(0):  ab9295cde92end98 		(complete match -- everything ending with num)
+grp(1):  ab9295cde92end9		(checks from R to L, for single digit)
+grp(2):  8
+
+
+Backslash class:::
+
+\d ---> [0-9]
+\d{10} ---> 10 digits
+\d{8,10} ---> 8 to 10 digits
+
+
+()---> used for clustering    e.g: (\+91)?  --->> +91 present either once or zero times
+[]---> any 1 inside this content
+
+(\)  ---> \ used inside () nullifies the metacharacters meaning
+\d{8,}   ---> minimum of 8 digits

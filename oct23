@@ -1,0 +1,70 @@
+sudo apt-get update 
+
+sudo apt-get install mysql-server
+
+sudo apt-get install mysql-server
+======================================================================================
+mysql -u root -p 
+Enter password: (pswd created f
+
+
+mysql> CREATE USER 'demo'@'localhost' IDENTIFIED BY 'demo';
+
+mysql> create database test
+
+mysql> grant all privileges on *.* to 'demo'@'localhost';
+mysql> show databases;
+    -> ^DBye
+
+======================================================================================
+
+$ mysql -u demo -p
+Enter password: 
+
+mysql> use test ;
+mysql> 
+mysql> create table pets(name varchar(20), owner varchar(20), age int);
+mysql> insert into pets values("parrot","nive",4);
+mysql> insert into pets values("peacock","sidhi",6);
+
+mysql> select * from pets;
++---------+-------+------+
+| name    | owner | age  |
++---------+-------+------+
+| parrot  | nive  |    4 |
+| pigeon  | abhi  |    4 |
+| peacock | sidhi |    6 |
++---------+-------+------+
+3 rows in set (0.00 sec)
+
+
+
+
+Understanding the difference between __new__ and __init__
+
+The major difference between these two methods is that __new__ handles object creation and __init__ handles object initialization.
+During instantiation these two have slight differences in how they work, when defined differently.
+
+
+Treating different cases
+
+Before diving into the actual implementations you need to know that __new__ accepts cls as it's first parameter and __init__ accepts self, because when calling __new__ you actually don't have an instance yet, therefore no self exists at that moment, whereas __init__ is called after __new__ and the instance is in place, so you can use self with it.
+ 
+
+The [] syntax for getting item by key or index is just syntax sugar.
+
+When you evaluate a[i] Python calls a.__getitem__(i) (or type(a).__getitem__(a, i)
+
+METACLASS
+=========
+
+5 is an integer, integer is a type
+here, 'integer' is a class....which belongs to class 'type'
+
+i.e., object of class 'type' is another class (integer)
+
+Hence, 'type' is a metaclass
+
+
+JSON -- list of dictionaries (Java script notation)
+

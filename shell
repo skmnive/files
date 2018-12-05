@@ -1,0 +1,11 @@
+Shell
+=====
+
+
+/bin/sh --> standard memory location of shell
+
+pstree ---> the tree directories of shell
+
+shell has 2 prompts
+sh -
+bash -

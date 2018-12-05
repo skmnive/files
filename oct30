@@ -1,0 +1,3 @@
+scp file_name uname@client:dstn_folder
+
+eg: scp oct30 cisco@localhost:/tmp

@@ -1,0 +1,39 @@
+open 1 terminal, from same open other.(simultaneous)
+
+in terminal :
+-----------
+
+mkfifo  np1
+ls -l np1
+
+prw-rw-r--  1 cisco cisco    0 Oct 26 10:02 np1
+
+/p - means 'pipe' --> named pipe
+These are used to communicate b/w 2 unrelated processes.
+
+
+=============================
+From unix, to know all services
+
+cat /etc/services
+
+nslookup --- convert domain name to IP using DNS
+
+netstat --- shows active network connections
+
+------------------------------
+
+telnet www.python.org 80
+Trying 151.101.156.223...
+Connected to dualstack.python.map.fastly.net.
+Escape character is '^]'.
+
+
+
+^\^]
+telnet> quit
+Connection closed.
+-----------------------------
+
+SOCKET : communication endpoint
+

@@ -1,0 +1,41 @@
+In terminal:::
+
+sudo apt-get install python3-pip
+pip3
+
+sudo pip3 install numpy
+
+
+In virtuak env(pycharm):
+file >
+ settings >
+ project >
+ add '+' >
+ search 'numpy' in packages >
+ install packages
+
+__pycache__ folder is created, when packages are imported in the files existing in that directry.
+
+To delete a file :
+
+os.unlink('fname')
+
+Namespace : virtual space to store variables & fncs
+
+dir() --> shows everything in current namespace
+
+keywords --> reserved words which cannot be used as variable
+builtins --> reserved words which can be used as variable
+
+Example for builtins ->> MAP, FILTER, DICT, ZIP -->> they don't have to be called using '.' operator
+
+Whereas, ->> APPEND, KEYS,CAPITALIZE .. which are used with '.' operators -->> are methods inside particular class objects like list, dict, string (list.append)
+
+
+__repr__(self) --> function used to overload when we try to print an object for a class
+
+def __repr__(self):
+	return 'An object of class'
+
+
+

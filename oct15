@@ -1,0 +1,12 @@
+IMMUTABLE Objects -- int,str,tuple
+x=1
+--> 1 memory location
+
+x=x+1
+--> new memory location
+
+MUTABLE objects -- list
+
+Update the existing memory location e.g: a.append()
+
+

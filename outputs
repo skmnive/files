@@ -1,0 +1,66 @@
+Script started on Thursday 08 November 2018 10:15:21 AM IST
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# cd[K[Kls
+[0m[01;34mhtml[0m
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# ls -l
+total 4
+drwxr-xr-x 2 root root 4096 Nov  8 10:12 [0m[01;34mhtml[0m
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# 
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# 
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# mkdir cgi-bin
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# 
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# mkdir cgi-bin[8Pls -l
+total 8
+drwxr-xr-x 2 root root 4096 Nov  8 10:16 [0m[01;34mcgi-bin[0m
+drwxr-xr-x 2 root root 4096 Nov  8 10:12 [01;34mhtml[0m
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# 
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# 
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# chmod 1777 cgi-bin
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# 
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# chmod 1777 cgi-binls -l[K
+total 8
+drwxrwxrwt 2 root root 4096 Nov  8 10:16 [0m[30;42mcgi-bin[0m
+drwxr-xr-x 2 root root 4096 Nov  8 10:12 [01;34mhtml[0m
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# 
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# 
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# gedit[K[K[K[K[Kwhich python3
+/usr/bin/python3
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# sudo gedit hell.[Ko.cgi[K]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# sudo gedit hello.cgi
+
+(gedit:5882): Gtk-WARNING **: Calling Inhibit failed: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.gnome.SessionManager was not provided by any .service files
+
+** (gedit:5882): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-spell-enabled not supported
+
+** (gedit:5882): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-encoding not supported
+
+** (gedit:5882): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-spell-enabled not supported
+
+** (gedit:5882): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-encoding not supported
+
+** (gedit:5882): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-spell-enabled not supported
+
+** (gedit:5882): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-encoding not supported
+
+** (gedit:5882): WARNING **: Set document metadata failed: Setting attribute metadata::gedit-position not supported
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# 
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# 
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# ls
+[0m[30;42mcgi-bin[0m  hello.cgi  [01;34mhtml[0m
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# 
+]0;root@cisco-ThinkPad-T430: /var/wwwroot@cisco-ThinkPad-T430:/var/www# cd cgi-bin/
+]0;root@cisco-ThinkPad-T430: /var/www/cgi-binroot@cisco-ThinkPad-T430:/var/www/cgi-bin# ls -l
+total 4
+-rw-r--r-- 1 root root 62 Nov  8 10:22 hello.cgi
+]0;root@cisco-ThinkPad-T430: /var/www/cgi-binroot@cisco-ThinkPad-T430:/var/www/cgi-bin# 
+]0;root@cisco-ThinkPad-T430: /var/www/cgi-binroot@cisco-ThinkPad-T430:/var/www/cgi-bin# 
+]0;root@cisco-ThinkPad-T430: /var/www/cgi-binroot@cisco-ThinkPad-T430:/var/www/cgi-bin# 
+]0;root@cisco-ThinkPad-T430: /var/www/cgi-binroot@cisco-ThinkPad-T430:/var/www/cgi-bin# chmod 755 hello.cgi 
+]0;root@cisco-ThinkPad-T430: /var/www/cgi-binroot@cisco-ThinkPad-T430:/var/www/cgi-bin# 
+]0;root@cisco-ThinkPad-T430: /var/www/cgi-binroot@cisco-ThinkPad-T430:/var/www/cgi-bin# ls -l
+total 4
+-rwxr-xr-x 1 root root 62 Nov  8 10:22 [0m[01;32mhello.cgi[0m
+]0;root@cisco-ThinkPad-T430: /var/www/cgi-binroot@cisco-ThinkPad-T430:/var/www/cgi-bin# pwd
+/var/www/cgi-bin
+]0;root@cisco-ThinkPad-T430: /var/www/cgi-binroot@cisco-ThinkPad-T430:/var/www/cgi-bin# 
+]0;root@cisco-ThinkPad-T430: /var/www/cgi-binroot@cisco-ThinkPad-T430:/var/www/cgi-bin# 
+]0;root@cisco-ThinkPad-T430: /var/www/cgi-binroot@cisco-ThinkPad-T430:/var/www/cgi-bin# ^C
+]0;root@cisco-ThinkPad-T430: /var/www/cgi-binroot@cisco-ThinkPad-T430:/var/www/cgi-bin# 

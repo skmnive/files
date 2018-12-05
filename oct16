@@ -1,0 +1,22 @@
+Functions ::
+
+Funcs can have keyword args, non keyword args, *args, **kwargs
+
+This is not allowed - pgm-functions_3.py
+display('lily',100,fcolor='brown',23,23,'addon',3)
+                                         ^
+SyntaxError: positional argument follows keyword argument
+
+
+
+Functions are first class objects
+
+Map::
+does some manipulation over the inputs
+
+Filter ::
+is used to check for a condition over the inputs
+
+Empty container is equal to 'False' not 'None'
+
+eg: d=[], a={}, s=()

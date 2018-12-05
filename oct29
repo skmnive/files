@@ -1,0 +1,7 @@
+pdb.run()
+executes the string stat under debugger's control
+
+ptrace - process trace
+used to trace abt child process stack from parent
+
+

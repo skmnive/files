@@ -1,0 +1,242 @@
+CTRL+SHT+S ===> save As
+
+Term>	conda install django
+	sudo apt-get install apache2
+	/etc/init.d/apache2 status
+	-------in Browser, 127.0.0.1---------
+	sudo su -
+	cd /var/www
+	mkdir cgi-bin
+	chmod 1777 cgi-bin
+	which python3
+	sudo gedit hello.cgi
+	----- save as in cgi-bin folder-----
+	cd cgi-bin/
+	chmod 755 hello.cgi 
+
+Pycharm term>
+In windows---- copy the django-admin.py from venv/Scripts to project folder-----
+(venv) C:\Users\ABHINIVE\PycharmProjects\God_Python> python django-admin.py startproject Django_Proj
+
+===========================
+
+ cisco@cisco-ThinkPad-T430:~/PycharmProjects/nive_py$ 
+		django-admin.py startproject mysite => 			
+		mysite
+			--mysite
+				-- init.py/ settings.py / url.py/ wsgi.py
+			-- manage.py	
+		
+		cd mysite
+		python3 manage.py runserver
+		-- in browser, run 127.0.0.1:8000 -----------
+		python3 manage.py runserver 0:8080
+		----------in browser, run 127.0.0.1:8080 ------------
+		python3 manage.py startapp app_name
+		app_name
+			--migrations
+				-- init.py
+			--init.py / admin.py/ apps.py/ models.py/views.py/tests.py
+		
+		cd app_name
+		
+Edit the views.py in /home/cisco/PycharmProjects/nive_py/mysite/myapp_1/views.py
+
+Edit the urls.py in  /home/cisco/PycharmProjects/nive_py/mysite/mysite/urls.py
+
+DontRun, but the urls.py in Pycharm terminal using >> python3 manage.py runserver
+
+In browser, open http://127.0.0.1:8000/hello/ , http://127.0.0.1:8000/time/, http://127.0.0.1:8000/hello/Niveeee, http://127.0.0.1:8000/pst/11
+
+
+edit the views.py, as
+
+
+def say_hello_name(name):
+    return HttpResponse("Hello hello Nivee "+ name)
+
+and run server again as, http://127.0.0.1:8000/hello/Niveeee
+
+You'll see the error ad to find exact err point, click traceback
+
+==========================================
+
+Run the /home/cisco/PycharmProjects/nive_py/mysite/django_template.py in pycharm terminal, using
+:~/PycharmProjects/nive_py/mysite$ python manage.py shell <django_template.py 
+My name is Nivedhita.
+My name is Abhi.
+My name is Sanju.
+My name is Kala.
+
+===================================
+
+To use template in http url file, run server again in pycahrm terminal
+(venv) cisco@cisco-ThinkPad-T430:~/PycharmProjects/nive_py/mysite$ python3 manage.py runserver
+
+
+
+IN manage.py >>
+add --
+import pymysql
+pymysql.install_as_MySQLdb()
+
+----------------------------
+(venv) cisco@cisco-ThinkPad-T430:~/PycharmProjects/nive_py/mysite$ python manage.py shell
+/home/cisco/anaconda3/lib/python3.7/site-packages/IPython/core/interactiveshell.py:763: UserWarning: Attempting to work in a virtualenv. If you encounter problems, please install IPython inside the virtualenv.
+  warn("Attempting to work in a virtualenv. If you encounter problems, please "
+Python 3.7.0 (default, Jun 28 2018, 13:15:42) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 6.5.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: from django.db import connection
+
+In [2]: cur = connection.cursor()
+
+In [3]: c = cur.execute('select * from pets')
+
+In [4]: cur.fetchall()
+Out[4]: 
+(('parrot', 'nive', 4),
+ ('pigeon', 'abhi', 4),
+ ('peacock', 'sidhi', 6),
+ ('Duck', 'Mekala', 10))
+
+======================================================
+>python manage.py makemigrations
+>python manage.py migrate
+
+
+-----------------------------------------------
+
+(base) (venv) cisco@cisco-ThinkPad-T430:~/PycharmProjects/nive_py/mysite$ python manage.py shell
+/home/cisco/anaconda3/lib/python3.7/site-packages/IPython/core/interactiveshell.py:763: UserWarning: Attempting to work in a virtualenv. If you encounter problems, please install IPython inside the virtualenv.
+  warn("Attempting to work in a virtualenv. If you encounter problems, please "
+Python 3.7.0 (default, Jun 28 2018, 13:15:42) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 6.5.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: 
+
+In [1]: from myapp_1.models import Publisher
+
+In [2]: p1 = Publisher(name='Addison Wesly',address='23,Arington Road',city ='Calabasas',state_province='MA',country='USA',website='http://addison-wesley.com/')
+
+In [3]: p1.save()
+
+In [4]: 
+
+In [4]: publisher_list = Publisher.objects.all()
+
+In [5]: publisher_list
+Out[5]: <QuerySet [<Publisher: Publisher object (1)>]>
+
+In [6]: print(publisher_list)
+<QuerySet [<Publisher: Publisher object (1)>]>
+
+In [7]: publisher_list.values
+Out[7]: <bound method QuerySet.values of <QuerySet [<Publisher: Publisher object (1)>]>>
+
+In [8]: publisher_list.values()
+Out[8]: <QuerySet [{'id': 1, 'name': 'Addison Wesly', 'address': '23,Arington Road', 'city': 'Calabasas', 'state_province': 'MA', 'country': 'USA', 'website': 'http://addison-wesley.com/'}]>
+
+In [9]: 
+
+
+In [9]: p2 = Publisher(name='Nivedhita',address='12,MMC',city ='Chennai',state_province='TN',country='IN',website='http://nive_blog.com/')
+
+In [10]: p2.save()
+
+In [11]: 
+
+In [11]: publisher_list = Publisher.objects.all()
+
+In [12]: publisher_list.values()
+Out[12]: <QuerySet [{'id': 1, 'name': 'Addison Wesly', 'address': '23,Arington Road', 'city': 'Calabasas', 'state_province': 'MA', 'country': 'USA', 'website': 'http://addison-wesley.com/'}, {'id': 2, 'name': 'Nivedhita', 'address': '12,MMC', 'city': 'Chennai', 'state_province': 'TN', 'country': 'IN', 'website': 'http://nive_blog.com/'}]>
+
+In [13]: 
+
+In [13]: 
+
+In [13]: Publisher.objects.filter(country='IN')
+Out[13]: <QuerySet [<Publisher: Publisher object (2)>]>
+
+In [14]: Publisher.objects.filter(country='IN').values()
+Out[14]: <QuerySet [{'id': 2, 'name': 'Nivedhita', 'address': '12,MMC', 'city': 'Chennai', 'state_province': 'TN', 'country': 'IN', 'website': 'http://nive_blog.com/'}]>
+
+In [16]: Publisher.objects.get(name='Nivedhita')
+Out[16]: <Publisher: Publisher object (2)>
+
+In [17]:  p3 = Publisher(name='SanjayKumar',address='17,Vijaya Nagar',city ='Bangalore',state_province='KA',country='IN',website='http://sanju_nive.com/')
+
+
+
+
+
+===============================================================================
+(venv) cisco@cisco-ThinkPad-T430:~/PycharmProjects/nive_py/mysite$ python3 manage.py createsuperuser
+Username (leave blank to use 'cisco'): cisco
+Email address: skmnive@gmail.com
+Password: 
+Password (again): 
+This password is too short. It must contain at least 8 characters.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+(venv) cisco@cisco-ThinkPad-T430:~/PycharmProjects/nive_py/mysite$ 
+(venv) cisco@cisco-ThinkPad-T430:~/PycharmProjects/nive_py/mysite$ python3 manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 09, 2018 - 05:04:42
+Django version 2.1.2, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+----------------------BROWSER-----------------------
+http://127.0.0.1:8000/admin/
+cisco/cisco
+users--> add --->nivedhita_s/sanjunive
+click "staff status" ticked
+
+Change the admin.py as....
+
+from myapp_1.models import *
+
+admin.site.register(Publisher)
+
+-------------------------
+cisco@cisco-ThinkPad-T430:~/PycharmProjects/nive_py/mysite$ python3 manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 09, 2018 - 05:10:52
+Django version 2.1.2, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+http://127.0.0.1:8000/admin/
+
+""""Publishers will be added""""
+
+
+logout admin--------------------
+try to login as nivedhita_s/sanjunive...
+you'll see "Dont have permission"
+
+logout ---------------------------
+
+LOGIN as cisco - select that user
+http://127.0.0.1:8000/admin/auth/user/2/change/
+
+Add permissions----
+like view/add in user permission
+
+logout ---------------------------
+
+try to login as nivedhita_s/sanjunive...
+see the permissions available
+
+try adding publishers
+
+(You can always see in terminal --> mysql -u demo -p (demo) -> use test;  -> select * from myapp_1_publisher; )
+
+
